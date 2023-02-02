@@ -6,8 +6,8 @@ import { faEnvelope, faPhone } from '@fortawesome/free-solid-svg-icons'
 
 function Footer() {
     return (
-        <div className="footer mt-5">
-            <Container className='py-5 my-3'>
+        <div className="footer" style={{ background: 'white' }}>
+            <Container className='py-5 mb-3'>
                 <Row>
                     <Col className="col-footer" md={6}>
                         <img
@@ -48,6 +48,11 @@ function Footer() {
                             <li className='mt-2'><a style={{ textDecoration: 'none' }} className='footer-link' href='#installation'>Kontak Kami</a></li>
                             <li className='mt-2'><a style={{ textDecoration: 'none' }} className='footer-link' href='#installation'>Media Sosial</a></li>
                         </ul>
+                    </Col>
+                </Row>
+                <Row className='mt-4'>
+                    <Col className="col-footer" md={{ span:6, offset:6 }}>
+                        Edspert, Copyright {new Date().getFullYear()}.
                     </Col>
                 </Row>
             </Container>

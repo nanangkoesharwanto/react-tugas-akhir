@@ -14,7 +14,7 @@ const CheckoutPage = () => {
     const navigate = useNavigate();
 
     return (
-        <Container style={{ paddingTop: "24px", marginTop: "30px" }}>
+        <Container style={{ paddingTop: 24, marginTop: 30, marginBottom: 50 }}>
             <Row>
                 <Col md={5}>
                     <Card>

@@ -23,7 +23,7 @@ const Header = ({entity}) => {
             <p className="lead my-2">
             {entity.description.substring(0, 50)}...
             </p>
-            <p className="mt-4">
+            <p className="mt-5">
               <div className="mb-2">Mentor</div>
               <div style={{ fontSize: 'larger', fontWeight: 'bold' }}>Name : {entity.title}</div>
               <div>Time : {entity.createdAt}</div>

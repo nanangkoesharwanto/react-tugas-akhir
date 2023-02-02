@@ -29,7 +29,7 @@ const DashboardPage = () => {
     return (
         <>
             <Header />
-            <div className='container my-5'>
+            <div className='container my-5' style={{ background: '#EFF4FA' }}>
                 <Row>
                     <Col md={3}><Sidebar /></Col>
                     <Col md={9}>

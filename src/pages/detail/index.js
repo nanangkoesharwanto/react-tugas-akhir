@@ -132,10 +132,11 @@ const DetailPage = () => {
 
             <div style={{
                 backgroundColor: '#2B3E58',
-                height: 200,
+                height: 250,
                 color: 'white',
                 textAlign: "center",
-                paddingTop: 40
+                paddingTop: 65,
+                marginTop: 30
             }}>
                 <h2>Sudah Siap Bergabung ?</h2>
                 <div className="mt-4">

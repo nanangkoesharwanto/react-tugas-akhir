@@ -103,10 +103,11 @@ const CheckoutPage = () => {
 
             <div style={{
                 backgroundColor: '#2B3E58',
-                height: 200,
+                height: 250,
                 color: 'white',
                 textAlign: "center",
-                paddingTop: 40
+                paddingTop: 65,
+                marginTop: 30
             }}>
                 <h2>Sudah Transfer? Lakukan verifikasi pembayaran segera!</h2>
                 <div className="mt-4">
