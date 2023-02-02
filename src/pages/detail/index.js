@@ -15,6 +15,7 @@ const DetailPage = () => {
     const fetchProduct = async (productId) => {
         await dispatch(getDetail(productId));
     };
+    
     const tambah = (item) => {
         dispatch(addItem(item));
         setShow(true);

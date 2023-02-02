@@ -14,8 +14,10 @@ import { useSelector } from "react-redux";
 import girl from "../../assets/images/girl.png";
 import { useNavigate } from "react-router-dom";
 import { FiArrowLeft } from "react-icons/fi";
+import { useState } from "react";
 
 const CheckoutPage = () => {
+    const [metode, setMetode] = useState('Bank Transfer (verifikasi manual) - Bank Mandiri');
     const { entities } = useSelector((state) => state.cart);
     const countTotal = (data) => {
         const result = data.reduce((prev, curr) => {
@@ -54,24 +56,29 @@ const CheckoutPage = () => {
                                                     id="radio1"
                                                     label="Bank Transfer ke Rek Bank Mandiri"
                                                     name="group1"
+                                                    checked={metode === 'Bank Transfer (verifikasi manual) - Bank Mandiri'}
+                                                    onChange={() => {setMetode('Bank Transfer (verifikasi manual) - Bank Mandiri')}}
                                                 />
                                                 <Form.Check
                                                     type="radio"
                                                     id="radio2"
                                                     label="Bank Transfer ke Rek Bank BCA"
                                                     name="group1"
+                                                    onChange={() => {setMetode('Bank Transfer (verifikasi manual) - Bank BCA')}}
                                                 />
                                                 <Form.Check
                                                     type="radio"
                                                     id="radio3"
                                                     label="Bank Transfer ke Rek Bank BRI"
                                                     name="group1"
+                                                    onChange={() => {setMetode('Bank Transfer (verifikasi manual) - Bank BRI')}}
                                                 />
                                                 <Form.Check
                                                     type="radio"
                                                     id="radio4"
                                                     label="Bank Transfer ke Rek Bank BNI"
                                                     name="group1"
+                                                    onChange={() => {setMetode('Bank Transfer (verifikasi manual) - Bank BNI')}}
                                                 />
                                             </Card.Body>
                                         </Card>
@@ -90,27 +97,31 @@ const CheckoutPage = () => {
                                             <Card.Body>
                                                 <Form.Check
                                                     type="radio"
-                                                    id="radio1"
+                                                    id="radio8"
                                                     label="Virtual Account Bank Mandiri"
                                                     name="group1"
+                                                    onChange={() => {setMetode('Virtual Account (verifikasi otomatis) - Bank Mandiri')}}
                                                 />
                                                 <Form.Check
                                                     type="radio"
-                                                    id="radio2"
+                                                    id="radio5"
                                                     label="Virtual Account Bank BCA"
                                                     name="group1"
+                                                    onChange={() => {setMetode('Virtual Account (verifikasi otomatis) - Bank BCA')}}
                                                 />
                                                 <Form.Check
                                                     type="radio"
-                                                    id="radio3"
+                                                    id="radio6"
                                                     label="Virtual Account Bank BRI"
                                                     name="group1"
+                                                    onChange={() => {setMetode('Virtual Account (verifikasi otomatis) - Bank BRI')}}
                                                 />
                                                 <Form.Check
                                                     type="radio"
-                                                    id="radio4"
+                                                    id="radio7"
                                                     label="Virtual Account Bank BNI"
                                                     name="group1"
+                                                    onChange={() => {setMetode('Virtual Account (verifikasi otomatis) - Bank BNI')}}
                                                 />
                                             </Card.Body>
                                         </Card>
@@ -167,7 +178,7 @@ const CheckoutPage = () => {
 
                             <p className="mb-4">
                                 <b>Metode Pembayaran</b>
-                                <div>Bank Transfer (verifikasi manual)-Mandiri</div>
+                                <div>{metode}</div>
                             </p>
 
                             <p className="mb-0">
