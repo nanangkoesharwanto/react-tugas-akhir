@@ -156,8 +156,8 @@ const CheckoutPage = () => {
                                 </tbody>
                                 <tfoot>
                                     <tr>
-                                        <td>Total Pembayaran</td>
-                                        <td>$ {countTotal(entities)}.00</td>
+                                        <th>Total Pembayaran</th>
+                                        <th>$ {countTotal(entities)}.00</th>
                                     </tr>
                                 </tfoot>
                             </Table>
