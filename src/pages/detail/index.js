@@ -1,24 +1,26 @@
-import { useEffect, useState } from "react";
-import { Col, Container, Image, Row, Button, Toast, Card, Form } from "react-bootstrap";
+import { useEffect } from "react";
+import { Col, Container, Image, Row, Button, Card, Form } from "react-bootstrap";
 import { useDispatch, useSelector } from "react-redux";
 import { useParams } from "react-router-dom";
 import { getDetail } from "../../store/course/action";
 import { addItem } from "../../store/cart/slice";
 import Header from "../../templates/header/detail";
+import { toast, Toaster } from "react-hot-toast";
 
 const DetailPage = () => {
     const { id } = useParams();
     const dispatch = useDispatch();
     const { entity } = useSelector((state) => state.course);
-    const [show, setShow] = useState(false);
 
     const fetchProduct = async (productId) => {
         await dispatch(getDetail(productId));
     };
-    
+
+    const notify = () => toast.success('Pendaftaran Berhasil Diproseskan.');
+
     const tambah = (item) => {
         dispatch(addItem(item));
-        setShow(true);
+        notify();
     };
 
     useEffect(() => {
@@ -27,6 +29,7 @@ const DetailPage = () => {
 
     return (
         <>
+            <div><Toaster position="top-right"/></div>
             <Header entity={entity} />
             <Container style={{ paddingTop: "24px" }}>
                 <Row>
@@ -48,17 +51,6 @@ const DetailPage = () => {
                         </Card>
                     </Col>
                     <Col md={9}>
-                        <Toast
-                            bg={"Success"}
-                            onClose={() => setShow(false)}
-                            show={show}
-                            delay={3000}
-                            autohide
-                            className="mb-3"
-                        >
-                            <Toast.Body style={{ fontWeight: "bold" }}>Pendaftaran Berhasil Diproseskan.</Toast.Body>
-                        </Toast>
-
                         <Card className="mb-4">
                             <Card.Body style={{ textAlign: "left" }}>
                                 <h3 className="mb-4">Materi</h3>
