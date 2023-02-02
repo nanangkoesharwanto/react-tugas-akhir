@@ -2,6 +2,7 @@ import { Outlet } from "react-router-dom";
 import NavbarMenu from "../Navbar";
 import Footer from "../../templates/footer";
 // import Sidebar from "../../templates/sidebar";
+import ScrollButton from '../../components/Button/ScrollButton';
 
 const Layout = () => {
     return (
@@ -11,6 +12,7 @@ const Layout = () => {
             {/* <Sidebar /> */}
             <Outlet />
             <Footer />
+            <ScrollButton />
         </>
     );
 }

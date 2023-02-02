@@ -11,6 +11,7 @@ import { useState } from "react";
 import { useNavigate } from "react-router-dom";
 import logo from "../../assets/images/logo_Edspert.png";
 import { FiShoppingCart } from "react-icons/fi";
+import { useSelector } from "react-redux";
 
 const NavbarMenu = ({ dataManager }) => {
   const [show, setShow] = useState(false);
@@ -22,6 +23,7 @@ const NavbarMenu = ({ dataManager }) => {
   const handleShowRight = () => setShowRight(true);
 
   const navigate = useNavigate();
+  const { entities } = useSelector((state) => state.cart);
 
   return (
     <>
@@ -73,7 +75,7 @@ const NavbarMenu = ({ dataManager }) => {
               >
                 <FiShoppingCart />
                 {" "}
-                <Badge bg="success">0</Badge>
+                <Badge bg="success">{entities.length}</Badge>
               </Button>
               <Button variant="danger" className="rounded-pill mx-2">
                 Login / Register

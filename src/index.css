@@ -15,3 +15,13 @@ code {
 #root{
   background: #EFF4FA;
 }
+
+.btn-back-to-top {
+  position: fixed;
+  right: 40px;
+  bottom: 30px;
+  height: 40px;
+  font-size: 3rem;
+  z-index: 1;
+  cursor: pointer;
+}

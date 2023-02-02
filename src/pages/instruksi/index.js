@@ -1,19 +1,18 @@
-import { Accordion, Button, Card, Col, Container, Form, Image, InputGroup, Row, Tab, Table, Tabs } from "react-bootstrap";
-import { useSelector } from "react-redux";
+import { Button, Card, Col, Container, Image, Row, Tab, Tabs } from "react-bootstrap";
 import girl from "../../assets/images/girl.png";
+import { FiArrowLeft } from "react-icons/fi";
+import { Link } from "react-router-dom";
 
 const CheckoutPage = () => {
-    const { entities } = useSelector((state) => state.cart);
-    const countTotal = (data) => {
-        const result = data.reduce((prev, curr) => {
-            return prev + parseInt(curr.price, 10);
-        }, 0);
-        return result;
-    };
-
     return (
         <>
-            <Container style={{ paddingTop: "24px", marginTop: "30px", marginBottom: "50px" }}>
+            <Container style={{ paddingTop: 24, marginBottom: 50 }}>
+                <FiArrowLeft /> <Link to={`/checkout`}>Checkout</Link> / Instruksi Bayar
+                
+                <h2 className="mb-5 mt-4">
+                Instruksi Bayar
+                </h2>
+
                 <Row>
                     <Col md={6}>
                         <Card>
@@ -27,8 +26,8 @@ const CheckoutPage = () => {
                                         />
                                     </Col>
                                     <Col md={9}>
-                                        <h3>Programming Laravel
-                                            Getting Started with Laravel 9</h3>
+                                        <h4>Programming Laravel
+                                            Getting Started with Laravel 9</h4>
                                         <p>Batch September 2022
                                             <br />Mentor William Hartono, Farel Prayoga</p>
                                     </Col>
@@ -51,7 +50,7 @@ const CheckoutPage = () => {
                     <Col md={6}>
                         <Card>
                             <Card.Body>
-                                <h2 className="mb-4">Instruksi Pembayaran</h2>
+                                <h3 className="mb-4">Instruksi Pembayaran</h3>
 
                                 <Tabs
                                     defaultActiveKey="profile"
