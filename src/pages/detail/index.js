@@ -56,19 +56,19 @@ const DetailPage = () => {
                                 <h3 className="mb-4">Materi</h3>
                                 <Card.Title style={{ minHeight: "25px", fontWeight: "bold" }}>
                                     <Form.Group className="mb-3" controlId="formBasicCheckbox1">
-                                        <Form.Check type="checkbox" label={entity.title} />
+                                        <Form.Check type="checkbox" checked label={entity.title} />
                                     </Form.Group></Card.Title>
                                 <Card.Text style={{ marginLeft: 30 }}>{entity.description}</Card.Text>
 
                                 <Card.Title style={{ minHeight: "25px", fontWeight: "bold" }}>
                                     <Form.Group className="mb-3" controlId="formBasicCheckbox1">
-                                        <Form.Check type="checkbox" label={entity.title} />
+                                        <Form.Check type="checkbox" checked label={entity.title} />
                                     </Form.Group></Card.Title>
                                 <Card.Text style={{ marginLeft: 30 }}>{entity.description}</Card.Text>
 
                                 <Card.Title style={{ minHeight: "25px", fontWeight: "bold" }}>
                                     <Form.Group className="mb-3" controlId="formBasicCheckbox1">
-                                        <Form.Check type="checkbox" label={entity.title} />
+                                        <Form.Check type="checkbox" checked label={entity.title} />
                                     </Form.Group></Card.Title>
                                 <Card.Text style={{ marginLeft: 30 }}>{entity.description}</Card.Text>
                             </Card.Body>
@@ -79,22 +79,22 @@ const DetailPage = () => {
                                 <h3 className="mb-4">Fasilitas</h3>
                                 <Card.Title style={{ minHeight: "25px", fontWeight: "bold" }}>
                                     <Form.Group className="mb-3" controlId="formBasicCheckbox1">
-                                        <Form.Check type="checkbox" label="E-Sertifikat" />
+                                        <Form.Check type="checkbox" checked label="E-Sertifikat" />
                                     </Form.Group></Card.Title>
 
                                 <Card.Title style={{ minHeight: "25px", fontWeight: "bold" }}>
                                     <Form.Group className="mb-3" controlId="formBasicCheckbox1">
-                                        <Form.Check type="checkbox" label="Portfolio" />
+                                        <Form.Check type="checkbox" checked label="Portfolio" />
                                     </Form.Group></Card.Title>
 
                                 <Card.Title style={{ minHeight: "25px", fontWeight: "bold" }}>
                                     <Form.Group className="mb-3" controlId="formBasicCheckbox1">
-                                        <Form.Check type="checkbox" label="Job Connector" />
+                                        <Form.Check type="checkbox" checked label="Job Connector" />
                                     </Form.Group></Card.Title>
 
                                 <Card.Title style={{ minHeight: "25px", fontWeight: "bold" }}>
                                     <Form.Group className="mb-3" controlId="formBasicCheckbox1">
-                                        <Form.Check type="checkbox" label="Career Development" />
+                                        <Form.Check type="checkbox" checked label="Career Development" />
                                     </Form.Group></Card.Title>
                             </Card.Body>
                         </Card>
